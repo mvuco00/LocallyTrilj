@@ -6,12 +6,13 @@ import SEO from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 
 const Blog = () => (
-  <div>
+  <div className="container" id="content">
     <Header siteTitle="LocallyTrilj">
       <SEO title="Novosti" />
     </Header>
     <h1 className="page-title">Novosti</h1>
     {/*render je anonymous function koja prima data (to smo dobili od queryja*/}
+
     <StaticQuery
       query={blogQuery}
       render={data => {
@@ -28,6 +29,7 @@ const Blog = () => (
                   path={node.frontmatter.path}
                   date={node.frontmatter.date}
                   body={node.excerpt}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
                 />
               )
             })}
@@ -50,6 +52,13 @@ const blogQuery = graphql`
             path
             type
             business
+            image {
+              childImageSharp {
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           excerpt
         }

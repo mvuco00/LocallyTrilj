@@ -8,7 +8,7 @@ body {
 a {
   color: #0056b3;
   &:hover {
-    color: #00a6ff;
+    color: #007bff;
     text-decoration: none;
   }
 }
@@ -21,17 +21,17 @@ h1 {
   margin-top: 55px;
 }
 .navbar {
-  background-color: rgb(46, 57, 122);
+  background-color: rgb(21, 92, 185);
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   // border-left: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(33, 17, 70, 0.4);
+  border-bottom: 1px solid rgba(172, 168, 168, 0.4);
   line-height: 1;
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #ffffff;
+  color: #e3e3e4;
   &:hover {
-    color: #4b96e7f5;
+    color: #030647;
   }
 }
 ul {
