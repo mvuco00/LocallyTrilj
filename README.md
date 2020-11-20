@@ -9,7 +9,7 @@ LocallyTrilj skuplja sve te informacije na jednom mjestu.
 - GatsbyJS, GraphQL
 - ReactStrap
 
-### Djelovi aplikacije
+### Dijelovi aplikacije
 - Naslovna stranica na kojoj se nalaze svi poslovni objekti
 - Stranica Novosti, koja je zapravo blog, sadrži sve novosti vezane za poslovne objekte
 - Stranica Kontakt sa kontakt podacima grada Trilja
