@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import Header from "../components/header"
+import Newsletter from "../components/newsletter"
 import SEO from "../components/seo"
 
 const Contact = () => (
@@ -9,6 +9,7 @@ const Contact = () => (
       <SEO title="Kontakt" />
     </Header>
     <h1 className="page-title">Kontaktirajte nas</h1>
+    <Newsletter />
   </div>
 )
 

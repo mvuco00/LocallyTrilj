@@ -30,6 +30,7 @@ const Blog = () => (
                   date={node.frontmatter.date}
                   body={node.excerpt}
                   fluid={node.frontmatter.image.childImageSharp.fluid}
+                  tags={node.frontmatter.tags}
                 />
               )
             })}
@@ -52,6 +53,7 @@ const blogQuery = graphql`
             path
             type
             business
+            tags
             image {
               childImageSharp {
                 fluid(maxWidth: 700) {

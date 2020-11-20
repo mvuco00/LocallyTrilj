@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Sidebar from "../components/sidebar"
 import Layout from "../components/layout"
 import Cards from "../components/cards"
 import { Col, Row } from "reactstrap"
@@ -9,15 +9,14 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Home page</h1>
 
     <Row>
       <Col md="8">
-        {" "}
-        <Cards />{" "}
+        <h1>Poslovni objekti</h1> <Cards />{" "}
       </Col>
       <Col md="4">
-        <div></div>
+        <h1>Najnovije</h1>
+        <Sidebar />
       </Col>
     </Row>
   </Layout>
