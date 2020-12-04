@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Sidebar from "../components/sidebar"
 import Layout from "../components/layout"
 import Cards from "../components/cards"

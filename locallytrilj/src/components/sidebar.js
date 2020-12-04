@@ -52,14 +52,19 @@ const SideBar = () => {
                   fluid={el.node.frontmatter.image.childImageSharp.fluid}
                 />
               </Link>
-              <CardTitle tag="h5">{el.node.frontmatter.title}</CardTitle>
+              <Link to={el.node.frontmatter.path}>
+                <CardTitle tag="h5">{el.node.frontmatter.title}</CardTitle>
+              </Link>
+
               <CardSubtitle tag="h6" className="mb-2 text-muted">
                 Card subtitle
               </CardSubtitle>
               <CardText>{el.node.excerpt}</CardText>
-              <button className="btn btn-outline-primary float-right">
-                Pročitaj više
-              </button>
+              <Link to={el.node.frontmatter.path}>
+                <button className="btn btn-outline-primary float-right">
+                  Pročitaj više
+                </button>
+              </Link>
             </CardBody>
           </Card>
         )
