@@ -1,19 +1,12 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Badge,
-} from "reactstrap"
+import { Card, CardText, CardBody, CardSubtitle, Badge } from "reactstrap"
 import { slugify } from "../util/utils"
 
 // destrukturiranje da ne koristimo npr props.title
 const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
+  console.log(path)
   return (
     <div className="blog-container">
       <Card style={{ width: "60%", height: "60%" }}>
@@ -21,7 +14,7 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
           <Img className="card-image-top" fluid={fluid} />
         </Link>
         <CardBody>
-          <CardTitle>{title}</CardTitle>
+          <Link to={path}>{title}</Link>
           <CardSubtitle className="mb-2 text-muted">
             <div className="card-tags">
               <span className="text-info">{date}</span>{" "}

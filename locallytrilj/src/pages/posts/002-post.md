@@ -3,7 +3,6 @@ title: Promjena radnog vremena zbog odluke Kriznog stožera
 date: 2020-11-19
 business: midnight
 type: coffee-bar
-path: "/second-post"
 image: "../../images/midnight.jpg"
 tags:
   - caffee-bar

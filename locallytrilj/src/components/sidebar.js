@@ -24,7 +24,6 @@ const SideBar = () => {
               type
               title
               tags
-              path
               image {
                 childImageSharp {
                   fluid(maxWidth: 700) {
@@ -32,6 +31,9 @@ const SideBar = () => {
                   }
                 }
               }
+            }
+            fields {
+              slug
             }
             excerpt(pruneLength: 80)
           }
@@ -42,17 +44,17 @@ const SideBar = () => {
   return (
     <div>
       {data.allMarkdownRemark.edges.map(el => {
-        console.log(el)
+        const path = `/blog/${el.node.fields.slug}`
         return (
           <Card key={el.node.frontmatter.title}>
             <CardBody>
-              <Link to={el.node.frontmatter.path}>
+              <Link to={path}>
                 <Img
                   className="card-image-top"
                   fluid={el.node.frontmatter.image.childImageSharp.fluid}
                 />
               </Link>
-              <Link to={el.node.frontmatter.path}>
+              <Link to={path}>
                 <CardTitle tag="h5">{el.node.frontmatter.title}</CardTitle>
               </Link>
 
@@ -60,7 +62,7 @@ const SideBar = () => {
                 Card subtitle
               </CardSubtitle>
               <CardText>{el.node.excerpt}</CardText>
-              <Link to={el.node.frontmatter.path}>
+              <Link to={path}>
                 <button className="btn btn-outline-primary float-right">
                   Pročitaj više
                 </button>

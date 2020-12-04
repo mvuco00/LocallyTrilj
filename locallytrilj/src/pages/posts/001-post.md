@@ -3,7 +3,6 @@ title: Humanitarni koncert grupe Ozon
 date: 2020-11-18
 business: carpe-diem
 type: coffee-bar
-path: "/first-post"
 image: "../../images/carpediem.jpg"
 tags:
   - caffee-bar

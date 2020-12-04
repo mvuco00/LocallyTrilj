@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Header from "../components/header"
 import Post from "../components/post"
 import SEO from "../components/seo"
@@ -20,13 +19,14 @@ const Blog = () => (
           <div>
             {/*node je destrukturiran, a to je naš post*/}
             {data.allMarkdownRemark.edges.map(({ node }) => {
+              console.log(node.fields.slug)
               return (
                 <Post
                   key={node.id}
                   title={node.frontmatter.title}
                   business={node.frontmatter.business}
                   type={node.frontmatter.type}
-                  path={node.frontmatter.path}
+                  path={node.fields.slug}
                   date={node.frontmatter.date}
                   body={node.excerpt}
                   fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -50,7 +50,6 @@ const blogQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MM YYYY")
-            path
             type
             business
             tags
@@ -61,6 +60,9 @@ const blogQuery = graphql`
                 }
               }
             }
+          }
+          fields {
+            slug
           }
           excerpt
         }

@@ -3,7 +3,6 @@ title: Humanitarna akcija u krojačkom salonu Ivana
 date: 2020-11-20
 business: salon-ivana
 type: krojacki-salon
-path: "/third-post"
 image: "../../images/krojackisalon.jpg"
 tags:
   - krojacki-salon
