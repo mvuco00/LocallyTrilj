@@ -3,32 +3,6 @@ module.exports = {
     title: `LocallyTrilj`,
     description: `Stranica s ciljem olakšavanja praćenja radnog vremena, podataka i novosti vezanih za uslužne djelatnosti u gradu Trilju`,
     author: `@gatsbyjs`,
-    businessObject: [
-      {
-        name: "Kavana Carpe Diem",
-        address: "Vedrine D220, Trilj",
-        lat: 43.62559,
-        long: 16.737605,
-        type: "caffee-bar",
-        workTime: "6:00 - 3:00",
-        instagram: "/carpediem/",
-        facebook: "carpediem",
-        path: "/carpediem",
-        tag: ["caffe-bar", "carpe-diem"],
-      },
-      {
-        name: "Caffe Bar Midnight",
-        address: "Ul. Kralja Tomislava 3, 21240, Trilj",
-        lat: 43.61781,
-        long: 16.730532,
-        type: "caffee-bar",
-        workTime: "6:00 - 3:00",
-        instagram: "/cb_midnight/",
-        facebook: "cb_midnight",
-        path: "/midnight",
-        tag: ["caffe-bar", "midnight"],
-      },
-    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -50,6 +24,15 @@ module.exports = {
         path: `${__dirname}/src/pages/posts`,
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

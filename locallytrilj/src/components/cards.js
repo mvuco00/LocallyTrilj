@@ -5,23 +5,20 @@ import CardComponent from "./card"
 const Cards = () => {
   const data = useStaticQuery(graphql`
     {
-      allSite {
+      allBusinessJson {
         edges {
           node {
-            siteMetadata {
-              businessObject {
-                address
-                facebook
-                instagram
-                lat
-                long
-                name
-                path
-                tag
-                type
-                workTime
-              }
-            }
+            address
+            facebook
+            instagram
+            id
+            lat
+            long
+            name
+            path
+            tag
+            type
+            workTime
           }
         }
       }
@@ -30,16 +27,14 @@ const Cards = () => {
   return (
     <div>
       {console.log(data)}
-      {data.allSite.edges[0].node.siteMetadata.businessObject.map(
-        businessObject => {
-          return (
-            <div key={businessObject.name}>
-              {console.log(businessObject)}
-              <CardComponent business={businessObject} />
-            </div>
-          )
-        }
-      )}
+      {data.allBusinessJson.edges.map(businessObject => {
+        return (
+          <div key={businessObject.node.id}>
+            {console.log(businessObject)}
+            <CardComponent business={businessObject} />
+          </div>
+        )
+      })}
     </div>
   )
 }

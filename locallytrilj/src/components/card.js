@@ -18,13 +18,17 @@ const CardComponent = props => {
     <div>
       <Card>
         <CardBody>
-          <CardTitle tag="h5">{props.business.name}</CardTitle>
+          <Link to={slugify(props.business.node.name)}>
+            {" "}
+            <CardTitle tag="h5">{props.business.node.name}</CardTitle>{" "}
+          </Link>
+
           <CardSubtitle tag="h6" className="mb-2 text-muted">
-            <span className="text-info">{props.business.address}</span>{" "}
+            <span className="text-info">{props.business.node.address}</span>{" "}
           </CardSubtitle>
           <Badge color="info" className="text-uppercase">
-            <Link to={`/tag/${slugify(props.business.type)}`}>
-              {props.business.type}
+            <Link to={`/tag/${slugify(props.business.node.type)}`}>
+              {props.business.node.type}
             </Link>
           </Badge>
         </CardBody>
