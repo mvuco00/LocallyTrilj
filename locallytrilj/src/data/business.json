@@ -8,7 +8,8 @@
         "workTime": "6:00 - 3:00",
         "instagram": "/carpediem/",
         "facebook": "carpediem",
-        "path": "/carpediem",
+        "path": "/carpe-diem",
+        "vlasnik": "Tiho Šipić",
         "tag": ["caffe-bar", "carpe-diem"]
       },
 
@@ -22,6 +23,7 @@
         "instagram": "/cb_midnight/",
         "facebook": "cb_midnight",
         "path": "/midnight",
+        "vlasnik": "Netko Netkić",
         "tag": ["caffe-bar", "midnight"]
       }
 ]
