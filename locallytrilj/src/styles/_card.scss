@@ -3,7 +3,7 @@
 }
 .card-title {
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 25px;
 }
 .card-tags {
   display: flex;
@@ -28,4 +28,22 @@ ul.post-tags {
   li {
     margin-right: 10px;
   }
+}
+
+.business-logo {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+}
+.card-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.card-link {
+  color: rgb(54, 123, 212);
 }

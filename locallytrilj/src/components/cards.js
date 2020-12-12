@@ -30,7 +30,6 @@ const Cards = () => {
       {data.allBusinessJson.edges.map(businessObject => {
         return (
           <div key={businessObject.node.id}>
-            {console.log(businessObject)}
             <CardComponent business={businessObject} />
           </div>
         )

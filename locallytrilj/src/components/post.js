@@ -1,7 +1,14 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { Card, CardText, CardBody, CardSubtitle, Badge } from "reactstrap"
+import {
+  Card,
+  CardText,
+  CardBody,
+  CardSubtitle,
+  Badge,
+  CardTitle,
+} from "reactstrap"
 import { slugify } from "../util/utils"
 
 // destrukturiranje da ne koristimo npr props.title
@@ -14,7 +21,9 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
           <Img className="card-image-top" fluid={fluid} />
         </Link>
         <CardBody>
-          <Link to={path}>{title}</Link>
+          <Link to={path} className="card-link">
+            <CardTitle tag="h5">{title}</CardTitle>
+          </Link>
           <CardSubtitle className="mb-2 text-muted">
             <div className="card-tags">
               <span className="text-info">{date}</span>{" "}

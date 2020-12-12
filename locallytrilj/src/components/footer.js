@@ -1,5 +1,7 @@
 import React from "react"
-
+import { FaFacebook } from "react-icons/fa"
+import { FaTwitter } from "react-icons/fa"
+import { FaGoogle } from "react-icons/fa"
 const Footer = () => {
   return (
     <div className="site-footer">
@@ -14,7 +16,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="facebook"
             >
-              <i className="fab fa-facebook-f fa-2x"></i>
+              <FaFacebook />
             </a>
           </li>
           <li>
@@ -24,7 +26,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="twitter"
             >
-              <i className="fab fa-twitter fa-2x"></i>
+              <FaTwitter />
             </a>
           </li>
           <li>
@@ -34,7 +36,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="google"
             >
-              <i className="fab fa-google fa-2x"></i>
+              <FaGoogle />
             </a>
           </li>
         </ul>

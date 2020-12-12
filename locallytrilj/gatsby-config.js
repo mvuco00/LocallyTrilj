@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `logos`,
-        path: `${__dirname}/src/images/logos`,
+        name: `content`,
+        path: `${__dirname}/content`,
       },
     },
     {

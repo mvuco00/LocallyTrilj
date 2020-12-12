@@ -54,7 +54,7 @@ const SideBar = () => {
                   fluid={el.node.frontmatter.image.childImageSharp.fluid}
                 />
               </Link>
-              <Link to={path}>
+              <Link to={path} className="card-link">
                 <CardTitle tag="h5">{el.node.frontmatter.title}</CardTitle>
               </Link>
 
