@@ -2,17 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import {
   Card,
-  Badge,
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button,
   Form,
   FormGroup,
-  Label,
   Input,
-  FormFeedback,
-  FormText,
 } from "reactstrap"
 
 const Newsletter = () => {
