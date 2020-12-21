@@ -58,3 +58,8 @@
   background-color: rgba(116, 135, 243, 0.295);
   transition: border-bottom 0.5s ease-in-out;
 }
+
+.all-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

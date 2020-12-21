@@ -16,7 +16,7 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
   console.log(path)
   return (
     <div className="blog-container">
-      <Card style={{ width: "60%", height: "60%" }}>
+      <Card style={{ width: "80%", height: "95%" }}>
         <Link to={path}>
           <Img className="card-image-top" fluid={fluid} />
         </Link>

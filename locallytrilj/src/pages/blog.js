@@ -18,7 +18,7 @@ const Blog = () => (
         query={blogQuery}
         render={data => {
           return (
-            <div>
+            <div className="all-posts">
               {/*node je destrukturiran, a to je naš post*/}
               {data.allMarkdownRemark.edges.map(({ node }) => {
                 console.log(node.fields.slug)
