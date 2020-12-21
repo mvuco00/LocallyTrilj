@@ -1,32 +1,51 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import CardComponent from "./card"
+import SearchBar from "./search-bar"
 
-const Cards = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allBusinessJson {
-        edges {
-          node {
-            address
-            facebook
-            instagram
-            id
-            lat
-            long
-            name
-            path
-            tag
-            type
-            workTime
+const Cards = props => {
+  // graphql se koristi s hookovima
+  //varijabili search se postavlja vrijesnot "", a za kasnije mijenjanje vrijednosti zove se SetSearch
+  const [search, setSearch] = useState("")
+  //filteredData se koristi za spremanje filtriranih podataka, ona je na početku undefined (dok se ne pokrene search)
+  const [filteredData, setFilteredData] = useState()
+  // dohvaćaju se podaci preko graphql upita
+  const [data, setData] = useState(
+    useStaticQuery(graphql`
+      {
+        allBusinessJson {
+          edges {
+            node {
+              address
+              facebook
+              instagram
+              id
+              lat
+              long
+              name
+              path
+              tag
+              type
+              workTime
+            }
           }
         }
       }
-    }
-  `)
-  return (
+    `)
+  )
+
+  //useEffect služi da se nešto napravi nakon renderiranja stranice i nakon svakog update-a
+  //preko njega pristupa se state-u
+  useEffect(() => {
+    setFilteredData(
+      data.allBusinessJson.edges.filter(dat =>
+        dat.node.name.toLowerCase().includes(search.toLowerCase())
+      )
+    )
+  }, [search, data])
+  //objekti koji se prikaze na pocetku, dok se jos ne koristi search
+  let businessObj = (
     <div>
-      {console.log(data)}
       {data.allBusinessJson.edges.map(businessObject => {
         return (
           <div key={businessObject.node.id}>
@@ -34,6 +53,26 @@ const Cards = () => {
           </div>
         )
       })}
+    </div>
+  )
+  return (
+    <div>
+      <SearchBar setSearch={setSearch} />
+
+      {/*provjera je li filteredData undefined, ako nije prikažu se filtrirani podaci, ako je prikaže se businessObj*/}
+      {filteredData != undefined
+        ? (businessObj = (
+            <div>
+              {filteredData.map(businessObject => {
+                return (
+                  <div key={businessObject.node.id}>
+                    <CardComponent business={businessObject} />
+                  </div>
+                )
+              })}
+            </div>
+          ))
+        : businessObj}
     </div>
   )
 }

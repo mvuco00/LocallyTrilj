@@ -1,7 +1,5 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { Component } from "react"
-
 import {
   Collapse,
   Navbar,
@@ -25,6 +23,7 @@ class Header extends Component {
       <div className="container" id="content">
         <Navbar fixed="top" light expand="sm">
           <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+
           <NavbarToggler onClick={this.setIsOpen} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
