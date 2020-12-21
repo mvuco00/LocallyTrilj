@@ -1,0 +1,52 @@
+.business-title-icon {
+  display: flex;
+  align-items: center;
+}
+.business-logo2 {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.business-title {
+  margin-bottom: 0;
+}
+.business-address {
+  color: rgb(150, 150, 150);
+}
+
+.work-time {
+  margin-left: 125px;
+}
+
+.site-socials {
+  margin-top: 15px;
+  padding: 5px;
+
+  .social-links {
+    margin-left: 120px;
+
+    ul.social-links-list {
+      li {
+        margin-right: 25px;
+        display: inline-block;
+
+        a {
+          color: $dark-gray;
+
+          &.instagram:hover {
+            color: #e95950;
+          }
+          &.facebook:hover {
+            color: rgb(66, 103, 178);
+          }
+
+          &.google:hover {
+            color: rgb(221, 75, 57);
+          }
+        }
+      }
+    }
+  }
+}

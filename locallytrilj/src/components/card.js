@@ -4,7 +4,6 @@ import { Card, Badge, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 import { slugify } from "../util/utils"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import Carpe from "../images/carpediem.jpg"
 
 const CardComponent = props => {
   const data = useStaticQuery(graphql`
