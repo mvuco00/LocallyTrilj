@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Map from "../components/map"
 import { Col, Row } from "reactstrap"
-import { FaInstagram, FaFacebook } from "react-icons/fa"
+import { FaInstagram, FaFacebookF } from "react-icons/fa"
 
 const BusinessPost = ({ data }) => {
   const business = data.businessJson
@@ -43,7 +43,7 @@ const BusinessPost = ({ data }) => {
                           rel="noopener noreferrer"
                           className="facebook"
                         >
-                          <FaFacebook />
+                          <FaFacebookF size="20px" />
                         </a>
                       </li>
                       <li>
@@ -53,7 +53,7 @@ const BusinessPost = ({ data }) => {
                           rel="noopener noreferrer"
                           className="instagram"
                         >
-                          <FaInstagram />
+                          <FaInstagram size="20px" />
                         </a>
                       </li>
                     </ul>

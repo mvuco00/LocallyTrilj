@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import React, { Component } from "react"
 import {
   Collapse,
@@ -28,13 +29,31 @@ class Header extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Naslovnica</NavLink>
+                <Link
+                  className="header-links"
+                  activeClassName="navbar__link--active"
+                  to="/"
+                >
+                  Naslovnica
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/blog">Novosti</NavLink>
+                <Link
+                  className="header-links"
+                  activeClassName="navbar__link--active"
+                  to="/blog"
+                >
+                  Novosti
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact">Kontakt</NavLink>
+                <Link
+                  className="header-links"
+                  activeClassName="navbar__link--active"
+                  to="/contact"
+                >
+                  Kontakt
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>

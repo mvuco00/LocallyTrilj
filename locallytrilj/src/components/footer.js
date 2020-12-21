@@ -16,7 +16,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="facebook"
             >
-              <FaFacebook />
+              <FaFacebook size="20px" />
             </a>
           </li>
           <li>
@@ -26,7 +26,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="twitter"
             >
-              <FaTwitter />
+              <FaTwitter size="20px" />
             </a>
           </li>
           <li>
@@ -36,7 +36,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="google"
             >
-              <FaGoogle />
+              <FaGoogle size="20px" />
             </a>
           </li>
         </ul>
