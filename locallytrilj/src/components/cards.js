@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import CardComponent from "./card"
 import SearchBar from "./search-bar"
+import CheckBox from "./checkbox"
 
 const Cards = props => {
   // graphql se koristi s hookovima
@@ -43,24 +44,33 @@ const Cards = props => {
       )
     )
   }, [search, data])
+  let tags = []
   //objekti koji se prikaze na pocetku, dok se jos ne koristi search
+
   let businessObj = (
     <div>
       {data.allBusinessJson.edges.map(businessObject => {
         return (
           <div key={businessObject.node.id}>
+            {tags.includes(businessObject.node.type)
+              ? null
+              : tags.push(businessObject.node.type)}
             <CardComponent business={businessObject} />
           </div>
         )
       })}
     </div>
   )
+
   return (
     <div>
-      <SearchBar setSearch={setSearch} />
+      <div className="searchandfilter">
+        <SearchBar setSearch={setSearch} />
+        <CheckBox tags={tags} />
+      </div>
 
       {/*provjera je li filteredData undefined, ako nije prikažu se filtrirani podaci, ako je prikaže se businessObj*/}
-      {filteredData != undefined
+      {filteredData !== undefined
         ? (businessObj = (
             <div>
               {filteredData.map(businessObject => {

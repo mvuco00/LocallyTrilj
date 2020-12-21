@@ -11,7 +11,7 @@
         "facebook": "carpediem",
         "path": "carpe-diem.jpg",
         "vlasnik": "Tiho Šipić",
-        "tag": ["caffe-bar", "carpe-diem"]
+        "tag": ["caffee-bar", "carpe-diem"]
       },
 
       {
@@ -26,7 +26,7 @@
         "facebook": "cb_midnight",
         "path": "midnight.jpg",
         "vlasnik": "Netko Netkić",
-        "tag": ["caffe-bar", "midnight"]
+        "tag": ["caffee-bar", "midnight"]
       },
       {
         "name": "Gradska Kavana",
@@ -34,13 +34,13 @@
         "kontakt": "098-765-4320",
         "lat": "43.616861",
         "long": "16.729995",
-        "type": "caffe-bar",
+        "type": "caffee-bar",
         "workTime": "6:00 - 3:00",
         "instagram": "/gradska-kavana/",
         "facebook": "gradska-kavana",
         "path": "gradska-kavana.jpg",
         "vlasnik": "Željko Marković",
-        "tag": ["caffe-bar", "gradska-kavana"]
+        "tag": ["caffee-bar", "gradska-kavana"]
       },
       {
         "name": "Fast Food Full House",

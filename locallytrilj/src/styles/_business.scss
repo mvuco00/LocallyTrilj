@@ -63,3 +63,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
+.searchandfilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

@@ -58,9 +58,6 @@ const SideBar = () => {
                 <CardTitle tag="h5">{el.node.frontmatter.title}</CardTitle>
               </Link>
 
-              <CardSubtitle tag="h6" className="mb-2 text-muted">
-                Card subtitle
-              </CardSubtitle>
               <CardText>{el.node.excerpt}</CardText>
               <Link to={path}>
                 <button className="btn btn-outline-primary float-right">
