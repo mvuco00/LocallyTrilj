@@ -23,6 +23,9 @@ const CheckBox = ({ tags, setFilter, setFiltered }) => {
             {tag}
           </DropdownItem>
         ))}
+        <DropdownItem key="clean" value="clean" onClick={e => filterFun(e)}>
+          očisti
+        </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 
-const SearchBar = ({ setSearch, setSearched }) => {
+const SearchBar = ({ setSearch }) => {
   const BarStyling = {
     width: "17rem",
     background: "#FFFFFF",
@@ -9,15 +9,13 @@ const SearchBar = ({ setSearch, setSearched }) => {
     borderRadius: "5px",
     marginBottom: "10px",
   }
-  const searchFun = e => {
-    setSearch(e.target.value)
-  }
+
   return (
     <input
       style={BarStyling}
       key="random1"
       placeholder={"Pronađi"}
-      onChange={e => searchFun(e)}
+      onChange={e => setSearch(e.target.value)}
     />
   )
 }
