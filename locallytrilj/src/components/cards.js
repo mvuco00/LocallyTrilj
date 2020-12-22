@@ -8,6 +8,9 @@ const Cards = props => {
   // graphql se koristi s hookovima
   //varijabili search se postavlja vrijesnot "", a za kasnije mijenjanje vrijednosti zove se SetSearch
   const [search, setSearch] = useState("")
+
+  const [filtered, setFiltered] = useState(false)
+  const [tag, setTag] = useState()
   //filteredData se koristi za spremanje filtriranih podataka, ona je na početku undefined (dok se ne pokrene search)
   const [filteredData, setFilteredData] = useState()
   // dohvaćaju se podaci preko graphql upita
@@ -62,15 +65,42 @@ const Cards = props => {
     </div>
   )
 
+  const tagClicked = e => {
+    setTag(e.target.value)
+  }
+  console.log("TAGG", tag)
+  console.log("SEARCH", search)
+
+  console.log("FILTERED", filtered)
+
+  let filteredObject = (
+    <div>
+      {data.allBusinessJson.edges.map(businessObject => {
+        return (
+          <div key={businessObject.node.id}>
+            {businessObject.node.type === tag ? (
+              <CardComponent business={businessObject} />
+            ) : null}
+          </div>
+        )
+      })}
+    </div>
+  )
+
   return (
     <div>
       <div className="searchandfilter">
         <SearchBar setSearch={setSearch} />
-        <CheckBox tags={tags} />
+        <CheckBox
+          tags={tags}
+          setFilter={tagClicked}
+          setFiltered={setFiltered}
+        />
       </div>
 
-      {/*provjera je li filteredData undefined, ako nije prikažu se filtrirani podaci, ako je prikaže se businessObj*/}
-      {filteredData !== undefined
+      {filtered
+        ? filteredObject
+        : filteredData !== undefined
         ? (businessObj = (
             <div>
               {filteredData.map(businessObject => {
