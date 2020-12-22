@@ -8,7 +8,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap"
 
 class Header extends Component {

@@ -28,11 +28,8 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
             <div className="card-tags">
               <span className="text-info">{date}</span>{" "}
               <span>
-                <Badge color="primary" className="text-uppercase">
-                  <Link to={`/tag/${slugify(business)}`}>{business}</Link>
-                </Badge>
                 <Badge color="info" className="text-uppercase">
-                  <Link to={`/tag/${slugify(type)}`}>{type}</Link>
+                  <Link to={`/tag/${slugify(business)}`}>{business}</Link>
                 </Badge>
               </span>
             </div>

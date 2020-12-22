@@ -1,5 +1,6 @@
 const { slugify } = require("./src/util/utils")
 const path = require("path")
+const _ = require(`lodash`)
 
 //executes each time one node is created in graphql schema
 //executes each time one node is created in graphql schema
@@ -32,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
   const templates = {
     singlePostTemplate: path.resolve("src/templates/single-post.js"),
     businessPostTemplate: path.resolve("src/templates/business-post.js"),
+    tagPostsTemplate: path.resolve("src/templates/tag-posts.js"),
   }
 
   return graphql(`
@@ -44,6 +46,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               tags
+              business
             }
           }
         }
@@ -70,6 +73,13 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = res.data.allMarkdownRemark.edges
     const business = res.data.allBusinessJson.edges
 
+    let types = []
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.business")) {
+        types = types.concat(edge.node.frontmatter.business)
+      }
+    })
+
     posts.forEach(({ node }) => {
       createPage({
         path: `/blog/${node.fields.slug}`,
@@ -88,6 +98,18 @@ exports.createPages = ({ actions, graphql }) => {
         //preko contexa se prosljedi nesto komponenti, ovaj slug se koristi za grapgql upit
         context: {
           slug: node.fields.slug,
+        },
+      })
+    })
+
+    //Create tag posts page
+    types.forEach(tag => {
+      console.log(tag)
+      createPage({
+        path: `/tag/${slugify(tag)}`,
+        component: templates.tagPostsTemplate,
+        context: {
+          tag,
         },
       })
     })

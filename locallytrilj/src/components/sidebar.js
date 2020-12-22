@@ -1,14 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import {
-  Card,
-  Badge,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-} from "reactstrap"
+import { Card, CardText, CardBody, CardTitle } from "reactstrap"
 
 const SideBar = () => {
   const data = useStaticQuery(graphql`
