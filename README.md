@@ -14,3 +14,8 @@ LocallyTrilj skuplja sve te informacije na jednom mjestu.
 - Stranica za svaki poslovni objekt koja sadrži osnovne informacije tog objekta
 - Stranica Novosti, koja je zapravo blog, sadrži sve novosti vezane za poslovne objekte
 - Stranica Kontakt sa kontakt podacima grada Trilja
+
+## Funkcionalnosti
+- Search i filter poslovnih objekata
+- Filter blog postova
+- Google karta lokacije svakog poslovnog objekta
