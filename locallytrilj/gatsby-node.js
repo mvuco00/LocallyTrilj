@@ -109,7 +109,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: `/tag/${slugify(tag)}`,
         component: templates.tagPostsTemplate,
         context: {
-          tag,
+          tag: tag,
         },
       })
     })

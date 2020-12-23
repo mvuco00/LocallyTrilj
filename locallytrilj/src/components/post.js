@@ -13,7 +13,6 @@ import { slugify } from "../util/utils"
 
 // destrukturiranje da ne koristimo npr props.title
 const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
-  console.log(path)
   return (
     <div className="blog-container">
       <Card style={{ width: "80%", height: "95%" }}>
@@ -29,7 +28,9 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
               <span className="text-info">{date}</span>{" "}
               <span>
                 <Badge color="info" className="text-uppercase">
-                  <Link to={`/tag/${slugify(business)}`}>{business}</Link>
+                  <Link to={`/tag/${slugify(business)}`}>
+                    {business.replace("-", " ")}
+                  </Link>
                 </Badge>
               </span>
             </div>
