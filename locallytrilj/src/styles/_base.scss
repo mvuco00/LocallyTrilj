@@ -1,6 +1,10 @@
+.container2 {
+  margin-top: 30px;
+}
 .container#content {
   margin-top: 60px;
 }
+
 body {
   background-color: $light-gray;
   font-family: $site-font;
@@ -38,13 +42,7 @@ ul {
   list-style: none;
   padding: 0;
 }
-.sidebar-links {
-  margin-bottom: 10px;
-}
-.sidebar-links a {
-  color: #666a6e;
-}
 
-.sidebar-links a:hover {
-  color: #5198df;
+.ulsidebar {
+  margin-top: 70px;
 }

@@ -20,12 +20,12 @@ const SinglePostSidebar = () => {
     }
   `)
   return (
-    <ul>
+    <ul className="ulsidebar">
       {data.allMarkdownRemark.edges.map(node => {
         return (
           <li key={node.node.fields.slug} className="sidebar-links">
             {
-              <Link to={node.node.fields.slug}>
+              <Link to={`/blog/${node.node.fields.slug}`}>
                 {node.node.frontmatter.title}
               </Link>
             }

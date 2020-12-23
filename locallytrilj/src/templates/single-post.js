@@ -14,7 +14,7 @@ const SinglePost = ({ data }) => {
       <Row>
         <Col md="9">
           <h1>{post.title}</h1>
-          <div className="container" id="content">
+          <div className="container2" id="content">
             <Img
               className="card-image-top"
               fluid={post.image.childImageSharp.fluid}
