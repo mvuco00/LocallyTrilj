@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
-import { graphql, StaticQuery } from "gatsby"
+
+import { graphql } from "gatsby"
 import Post from "../components/post"
 const TagsPost = ({ data, pageContext }) => {
   const { tag } = pageContext

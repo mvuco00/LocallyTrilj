@@ -6,7 +6,7 @@ body {
   font-family: $site-font;
 }
 a {
-  color: #dbdddf;
+  color: #d7e3f0;
   &:hover {
     color: #8dc7ee;
     text-decoration: none;
@@ -37,4 +37,14 @@ h1 {
 ul {
   list-style: none;
   padding: 0;
+}
+.sidebar-links {
+  margin-bottom: 10px;
+}
+.sidebar-links a {
+  color: #666a6e;
+}
+
+.sidebar-links a:hover {
+  color: #5198df;
 }
