@@ -34,6 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
     singlePostTemplate: path.resolve("src/templates/single-post.js"),
     businessPostTemplate: path.resolve("src/templates/business-post.js"),
     tagPostsTemplate: path.resolve("src/templates/tag-posts.js"),
+    postList: path.resolve("src/templates/pagination.js"),
   }
 
   return graphql(`
@@ -110,6 +111,27 @@ exports.createPages = ({ actions, graphql }) => {
         component: templates.tagPostsTemplate,
         context: {
           tag: tag,
+        },
+      })
+    })
+    const postsPerPage = 6
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numberOfPages }).forEach((_, index) => {
+      // 0 je prva stranica, ako je to istina, onda smo na prvoj stranici
+      const isFirstPage = index === 0
+      const currentPage = index + 1
+
+      if (isFirstPage) return
+      createPage({
+        path: `/blog/pages/${currentPage}`,
+        component: templates.postList,
+        context: {
+          limit: postsPerPage,
+          //sluzi da se zna od kojeg posta se treba izvrsit querry u templeteu
+          skip: index * postsPerPage,
+          currentPage,
+          numberOfPages,
         },
       })
     })
