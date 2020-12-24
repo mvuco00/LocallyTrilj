@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import { CardTitle, Col, Row } from "reactstrap"
+import { Card, CardTitle, Col, Row, CardSubtitle } from "reactstrap"
 import Img from "gatsby-image"
 import SinglePostSidebar from "../components/single-post-sidebar"
 
@@ -14,18 +14,25 @@ const SinglePost = ({ data }) => {
       <Row>
         <Col md="9">
           <h1>{post.title}</h1>
-          <div className="container2" id="content">
-            <Img
-              className="card-image-top"
-              fluid={post.image.childImageSharp.fluid}
-            ></Img>
-            <CardTitle>{post.title}</CardTitle>
+          <Card>
+            <div className="container2" id="content">
+              <Img
+                className="card-image-top2"
+                fluid={post.image.childImageSharp.fluid}
+              ></Img>
+              <div className="dateandphoto">
+                <span className="date">{post.date}</span>
+                <span className="photocredit">
+                  <i>Photo by: Flicklr</i>
+                </span>
+              </div>
 
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-            />
-          </div>
+              <div
+                className="blog-post-content"
+                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+              />
+            </div>
+          </Card>
         </Col>
         <Col md="3">
           <h1>Najnovije</h1>

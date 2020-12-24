@@ -47,3 +47,23 @@ ul.post-tags {
 .card-link {
   color: rgb(54, 123, 212);
 }
+.card-image-top2 {
+  height: 350px;
+  padding: 10px;
+}
+
+.blog-post-content {
+  margin-top: 10px;
+  color: black;
+}
+.dateandphoto {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  color: blue;
+}
+.photocredit {
+  color: darkgray;
+}
