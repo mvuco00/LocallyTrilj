@@ -80,3 +80,44 @@
 .spec-info {
   margin-left: 100px;
 }
+
+@media only screen and (max-width: 767px) {
+  .all-posts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 15.5px;
+    margin-bottom: 10px;
+  }
+  .btn-outline-primary {
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  .card-text {
+    font-size: 15px;
+  }
+  .btn-outline-primary {
+    padding: 0.27rem 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 404px) {
+  .card-title {
+    font-size: 18px;
+  }
+  .card-text {
+    font-size: 14.5px;
+  }
+  .btn-outline-primary {
+    padding: 0.2rem 0.5rem;
+  }
+}

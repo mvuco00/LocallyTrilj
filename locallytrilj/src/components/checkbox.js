@@ -20,10 +20,15 @@ const CheckBox = ({ tags, setFilter, setFiltered }) => {
       <DropdownMenu right>
         {tags.map(tag => (
           <DropdownItem key={tag} value={tag} onClick={e => filterFun(e)}>
-            {tag}
+            {tag.replace("-", " ")}
           </DropdownItem>
         ))}
-        <DropdownItem key="clean" value="clean" onClick={e => filterFun(e)}>
+        <DropdownItem
+          key="clean"
+          value="clean"
+          className="clean"
+          onClick={e => filterFun(e)}
+        >
           očisti
         </DropdownItem>
       </DropdownMenu>
