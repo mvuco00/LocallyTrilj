@@ -11,7 +11,7 @@
         "facebook": "carpediem",
         "path": "carpe-diem.jpg",
         "vlasnik": "Tiho Šipić",
-        "tag": ["caffee-bar", "carpe-diem"]
+        "tag": ["noćni klub", "glazba uživo", "bašta"]
       },
 
       {
@@ -26,7 +26,7 @@
         "facebook": "cb_midnight",
         "path": "midnight.jpg",
         "vlasnik": "Netko Netkić",
-        "tag": ["caffee-bar", "midnight"]
+        "tag": ["noćni klub", "bašta"]
       },
       {
         "name": "Gradska Kavana",
@@ -40,7 +40,7 @@
         "facebook": "gradska-kavana",
         "path": "gradska-kavana.jpg",
         "vlasnik": "Željko Marković",
-        "tag": ["caffee-bar", "gradska-kavana"]
+        "tag": ["bašta"]
       },
       {
         "name": "Fast Food Full House",
@@ -54,7 +54,7 @@
         "facebook": "full-house",
         "path": "full-house.jpg",
         "vlasnik": "Stipe Galić",
-        "tag": ["fast-food"]
+        "tag": ["dostava", "coffee to go"]
       },
       {
         "name": "Restoran Pizzeria Marinero",
@@ -68,7 +68,7 @@
         "facebook": "marinero",
         "path": "marinero.jpg",
         "vlasnik": "Miro Bradarić",
-        "tag": ["restoran"]
+        "tag": ["dostava", "catering", "organizacija slavlja"]
       },
       {
         "name": "Frizerski salon Dado",
@@ -82,7 +82,7 @@
         "facebook": "",
         "path": "brico.jpg",
         "vlasnik": "Dalibor Bulj",
-        "tag": ["frizerski-salon"]
+        "tag": ["salon za muškarce"]
       },
       {
         "name": "Frizerski salon Mirko",
@@ -96,7 +96,7 @@
         "facebook": "",
         "path": "pervan.jpg",
         "vlasnik": "Mirko Pervan",
-        "tag": ["frizerski-salon"]
+        "tag": ["salon za muškarce"]
       },
       {
         "name": "Frizerski salon Pilus",
@@ -110,7 +110,7 @@
         "facebook": "",
         "path": "pilus.jpg",
         "vlasnik": "Meri Bulj",
-        "tag": ["frizerski-salon"]
+        "tag":  ["salon za žene"]
       },
       {
         "name": "Prodajni centar Mack",
@@ -124,7 +124,7 @@
         "facebook": "mack",
         "path": "mack.jpg",
         "vlasnik": "",
-        "tag": ["trgovina", "mack"]
+        "tag": ["trgovina raznovrsne opreme"]
       }
 ]
  

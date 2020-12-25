@@ -68,10 +68,6 @@ const Cards = props => {
   const tagClicked = e => {
     setTag(e.target.value)
   }
-  console.log("TAGG", tag)
-  console.log("SEARCH", search)
-
-  console.log("FILTERED", filtered)
 
   let filteredObject = (
     <div>

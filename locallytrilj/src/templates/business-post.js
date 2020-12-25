@@ -8,6 +8,18 @@ import { FaInstagram, FaFacebookF } from "react-icons/fa"
 
 const BusinessPost = ({ data }) => {
   const business = data.businessJson
+  const businessLng = business.tag.length
+  const tagList = []
+  business.tag.map(el => {
+    let x = ""
+    if (business.tag[businessLng - 1] === el) {
+      tagList.push(el)
+    } else {
+      x = el + ","
+      tagList.push(x)
+    }
+  })
+
   return (
     <Layout>
       <SEO title={business.name} />
@@ -24,39 +36,55 @@ const BusinessPost = ({ data }) => {
                   />
                   <div>
                     <h1 className="business-title">{business.name}</h1>
-                    <span className="business-address">{business.address}</span>
                   </div>
                 </div>
-                <h5 className="work-time">
-                  <b>Radno vrijeme:</b> {business.workTime}
-                </h5>
-                <h5 className="work-time">
-                  <b>Kontakt:</b> {business.kontakt}
-                </h5>
-                <div className="site-socials">
-                  <div className="social-links">
-                    <ul className="social-links-list">
-                      <li>
-                        <a
-                          href={`https://www.facebook.com/${business.facebook}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="facebook"
-                        >
-                          <FaFacebookF size="20px" />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href={`https://www.instagram.com${business.instagram}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="instagram"
-                        >
-                          <FaInstagram size="20px" />
-                        </a>
-                      </li>
-                    </ul>
+                <div className="info">
+                  <h5 className="info-title">Osnovne informacije</h5>
+                  <h5>
+                    <b>Radno vrijeme:</b> {business.workTime}
+                  </h5>
+                  <h5>
+                    <b>Adresa:</b> {business.address}
+                  </h5>
+                  <h5>
+                    <b>Kontakt:</b> {business.kontakt}
+                  </h5>
+                  <h5 className="info-title-more">Dodatno</h5>
+                  <div>
+                    <b>Vlasnik:</b> {business.vlasnik}
+                  </div>
+                  <div>
+                    <b>Specifičnosti objekta: </b>
+                    {tagList.map(el => (
+                      <span key={el}>{`${el} `}</span>
+                    ))}
+                  </div>
+
+                  <div className="site-socials">
+                    <div className="social-links">
+                      <ul className="social-links-list">
+                        <li>
+                          <a
+                            href={`https://www.facebook.com/${business.facebook}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="facebook"
+                          >
+                            <FaFacebookF size="20px" />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={`https://www.instagram.com${business.instagram}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="instagram"
+                          >
+                            <FaInstagram size="20px" />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

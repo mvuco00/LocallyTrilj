@@ -16,10 +16,6 @@
   color: rgb(150, 150, 150);
 }
 
-.work-time {
-  margin-left: 125px;
-}
-
 .site-socials {
   margin-top: 15px;
   padding: 5px;
@@ -68,4 +64,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.info {
+  margin-left: 125px;
+}
+
+.info-title {
+  margin-bottom: 8px;
+  color: gray;
+}
+.info-title-more {
+  margin-top: 25px;
+  color: gray;
+}
+.spec-info {
+  margin-left: 100px;
 }
