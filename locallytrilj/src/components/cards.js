@@ -64,7 +64,7 @@ const Cards = props => {
       })}
     </div>
   )
-
+  console.log(tag)
   const tagClicked = e => {
     setTag(e.target.value)
   }
@@ -75,6 +75,8 @@ const Cards = props => {
         return (
           <div key={businessObject.node.id}>
             {businessObject.node.type === tag ? (
+              <CardComponent business={businessObject} />
+            ) : tag === "clean" ? (
               <CardComponent business={businessObject} />
             ) : null}
           </div>

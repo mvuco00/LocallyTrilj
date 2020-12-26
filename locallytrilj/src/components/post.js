@@ -25,7 +25,7 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
           </Link>
           <CardSubtitle className="mb-2 text-muted">
             <div className="card-tags">
-              <span className="text-info">{date}</span>{" "}
+              <span className="text-info">{date}</span>
               <span>
                 <Badge color="info" className="text-uppercase">
                   <Link to={`/tag/${slugify(business)}`}>
