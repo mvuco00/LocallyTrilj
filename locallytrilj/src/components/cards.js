@@ -8,7 +8,7 @@ const Cards = props => {
   // graphql se koristi s hookovima
   //varijabili search se postavlja vrijesnot "", a za kasnije mijenjanje vrijednosti zove se SetSearch
   const [search, setSearch] = useState("")
-  const [filt, setFilt] = useState("")
+
   const [filtered, setFiltered] = useState(false)
   const [tag, setTag] = useState()
   //filteredData se koristi za spremanje filtriranih podataka, ona je na početku undefined (dok se ne pokrene search)

@@ -1,7 +1,5 @@
 import React from "react"
 import Post from "../components/post"
-import SEO from "../components/seo"
-
 import { graphql, StaticQuery } from "gatsby"
 import PaginationLinks from "../components/pagination-links"
 import Layout from "../components/layout"

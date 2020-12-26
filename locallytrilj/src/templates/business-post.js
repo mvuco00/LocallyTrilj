@@ -13,10 +13,10 @@ const BusinessPost = ({ data }) => {
   business.tag.map(el => {
     let x = ""
     if (business.tag[businessLng - 1] === el) {
-      tagList.push(el)
+      return tagList.push(el)
     } else {
       x = el + ","
-      tagList.push(x)
+      return tagList.push(x)
     }
   })
 

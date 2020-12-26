@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import { Card, CardTitle, Col, Row, CardSubtitle } from "reactstrap"
+import { Card, Col, Row } from "reactstrap"
 import Img from "gatsby-image"
 import SinglePostSidebar from "../components/single-post-sidebar"
 
