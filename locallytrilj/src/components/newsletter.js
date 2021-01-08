@@ -29,7 +29,7 @@ const Newsletter = () => {
               />
             </FormGroup>
           </Form>
-          <button className="btn btn-outline-success text-uppercase">
+          <button className="btn btn-outline-success text-uppercase  float-right">
             Pretplati se
           </button>
         </CardBody>

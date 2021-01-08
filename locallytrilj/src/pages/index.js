@@ -11,10 +11,10 @@ const IndexPage = () => (
 
     <Row>
       <Col md="8">
-        <h1>Poslovni objekti</h1> <Cards />{" "}
+        <h1 className="page-title">Poslovni objekti</h1> <Cards />{" "}
       </Col>
       <Col md="4">
-        <h1>Najnovije</h1>
+        <h1 className="page-title">Najnovije</h1>
         <Sidebar />
       </Col>
     </Row>
