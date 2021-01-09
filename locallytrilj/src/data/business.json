@@ -2,6 +2,7 @@
 [   {
         "name": "Kavana Carpe Diem",
         "address": "Vedrine D220, Trilj",
+        "business": "carpe-diem",
         "kontakt": "098-765-4302",
         "lat": "43.62559",
         "long": "16.737605",
@@ -17,6 +18,7 @@
       {
         "name": "Caffe Bar Midnight",
         "address": "Ul. Kralja Tomislava 3, 21240, Trilj",
+        "business": "midnight",
         "kontakt": "098-765-1132",
         "lat": "43.61781",
         "long": "16.730532",
@@ -31,6 +33,7 @@
       {
         "name": "Gradska Kavana",
         "address": "Ul. Kralja Tomislava 2",
+        "business": "gradska-kavana",
         "kontakt": "098-765-4320",
         "lat": "43.616861",
         "long": "16.729995",
@@ -45,6 +48,7 @@
       {
         "name": "Fast Food Full House",
         "address": "Sv. Mihovila 1",
+        "business": "full-house",
         "kontakt": "098-765-4532",
         "lat": "43.6177712928338",
         "long": "16.728375711379037",
@@ -58,7 +62,8 @@
       },
       {
         "name": "Restoran Pizzeria Marinero",
-        "address": "Ul. Bana Jelačića 15a",   
+        "address": "Ul. Bana Jelačića 15a", 
+        "business": "marinero",  
         "kontakt": "098-765-4311", 
         "lat": "43.616113428125516",
         "long": "16.729577842061293",
@@ -73,6 +78,7 @@
       {
         "name": "Frizerski salon Dado",
         "address": "Ul. Kralja Tomislava 1, 21240, Trilj", 
+        "business": "salon-dado",
         "kontakt": "098-765-432",
         "lat": "43.61930678692319",
         "long": "16.73321548439085",
@@ -87,6 +93,7 @@
       {
         "name": "Frizerski salon Mirko",
         "address": "Ul. Kralja Tomislava 34, 21240, Trilj", 
+        "business": "salon-mirko",
         "kontakt": "098-765-432",
         "lat": "43.618241324187814",
         "long": "16.732087811379056",
@@ -101,6 +108,7 @@
       {
         "name": "Frizerski salon Pilus",
         "address": "Ul. Poljičke Republike 10, 21240, Trilj", 
+        "business": "salon-pilus",
         "kontakt": "098-765-432",
         "lat": "43.61785299257709",
         "long": "16.72750834034643",
@@ -115,6 +123,7 @@
       {
         "name": "Prodajni centar Mack",
         "address": "Ul. Kralja Tomislava 1, 21240, Trilj", 
+        "business": "mack",
         "kontakt": "098-765-432",
         "lat": " 43.61769099665867",
         "long": "16.73074154219939",

@@ -11,8 +11,10 @@ const Cards = props => {
 
   const [filtered, setFiltered] = useState(false)
   const [tag, setTag] = useState()
+  const [data2, setData2] = useState([])
   //filteredData se koristi za spremanje filtriranih podataka, ona je na početku undefined (dok se ne pokrene search)
   const [filteredData, setFilteredData] = useState()
+
   // dohvaćaju se podaci preko graphql upita
   const [data, setData] = useState(
     useStaticQuery(graphql`
@@ -21,6 +23,7 @@ const Cards = props => {
           edges {
             node {
               address
+              business
               facebook
               instagram
               id
@@ -41,12 +44,26 @@ const Cards = props => {
   //useEffect služi da se nešto napravi nakon renderiranja stranice i nakon svakog update-a
   //preko njega pristupa se state-u
   useEffect(() => {
-    setFilteredData(
-      data.allBusinessJson.edges.filter(dat =>
-        dat.node.name.toLowerCase().includes(search.toLowerCase())
-      )
-    )
-  }, [search, data])
+    filtered
+      ? setFilteredData(
+          data2.filter(dat2 =>
+            dat2.node.name.toLowerCase().includes(search.toLowerCase())
+          )
+        )
+      : setFilteredData(
+          data.allBusinessJson.edges.filter(dat =>
+            dat.node.name.toLowerCase().includes(search.toLowerCase())
+          )
+        )
+  }, [search, data, data2, filtered])
+
+  useEffect(() => {
+    filtered
+      ? setData2(
+          data.allBusinessJson.edges.filter(el => el.node.type.includes(tag))
+        )
+      : setData2(data.allBusinessJson.edges.map(el => el))
+  }, [data.allBusinessJson.edges, data, tag, filtered])
 
   let tags = []
   //objekti koji se prikaze na pocetku, dok se jos ne koristi search
@@ -65,6 +82,7 @@ const Cards = props => {
       })}
     </div>
   )
+  console.log(data2)
 
   const tagClicked = e => {
     setTag(e.target.value)
@@ -72,17 +90,29 @@ const Cards = props => {
 
   let filteredObject = (
     <div>
-      {data.allBusinessJson.edges.map(businessObject => {
-        return (
-          <div key={businessObject.node.id}>
-            {businessObject.node.type === tag ? (
-              <CardComponent business={businessObject} />
-            ) : tag === "clean" ? (
-              <CardComponent business={businessObject} />
-            ) : null}
-          </div>
-        )
-      })}
+      {filteredData === undefined
+        ? data2.map(businessObject => {
+            return (
+              <div key={businessObject.node.id}>
+                {businessObject.node.type === tag ? (
+                  <CardComponent business={businessObject} />
+                ) : tag === "clean" ? (
+                  window.location.reload()
+                ) : null}
+              </div>
+            )
+          })
+        : filteredData.map(businessObject => {
+            return (
+              <div key={businessObject.node.id}>
+                {businessObject.node.type === tag ? (
+                  <CardComponent business={businessObject} />
+                ) : tag === "clean" ? (
+                  window.location.reload()
+                ) : null}
+              </div>
+            )
+          })}
     </div>
   )
 

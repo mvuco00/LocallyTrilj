@@ -5,28 +5,6 @@ import { slugify } from "../util/utils"
 import { useStaticQuery, graphql } from "gatsby"
 
 const CardComponent = props => {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(
-        filter: { absolutePath: { regex: "//content/images/logos/" } }
-        sort: { fields: name }
-      ) {
-        edges {
-          node {
-            id
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div>
       <Card>
@@ -46,8 +24,8 @@ const CardComponent = props => {
               <span className="text-info">{props.business.node.address}</span>{" "}
             </CardSubtitle>
             <Badge color="info" className="text-uppercase">
-              <Link to={`/tag/${slugify(props.business.node.type)}`}>
-                {props.business.node.type}
+              <Link to={`/tag/${slugify(props.business.node.business)}`}>
+                {props.business.node.business}
               </Link>
             </Badge>
           </CardBody>
