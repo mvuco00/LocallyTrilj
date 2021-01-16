@@ -82,7 +82,6 @@ const Cards = props => {
       })}
     </div>
   )
-  console.log(data2)
 
   const tagClicked = e => {
     setTag(e.target.value)

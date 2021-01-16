@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { Card, Badge, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 import { slugify } from "../util/utils"
-import { useStaticQuery, graphql } from "gatsby"
 
 const CardComponent = props => {
   return (
