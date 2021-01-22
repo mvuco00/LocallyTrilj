@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import { Card, Col, Row } from "reactstrap"
+import { Card, Col, Row, Badge } from "reactstrap"
 import Img from "gatsby-image"
 import SinglePostSidebar from "../components/single-post-sidebar"
 
@@ -11,9 +11,9 @@ const SinglePost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} />
+      {console.log(post)}
       <Row>
         <Col md="9">
-          <h1>{post.title}</h1>
           <Card>
             <div className="container2" id="content">
               <Img
@@ -26,11 +26,20 @@ const SinglePost = ({ data }) => {
                   <i>Photo by: Flicklr</i>
                 </span>
               </div>
-
+              <h2>{post.title}</h2>
               <div
                 className="blog-post-content"
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
               />
+              <Badge color="dark" className="text-uppercase ">
+                <Link to={`/blog`}>BLOG</Link>
+              </Badge>
+
+              <Badge color="info" className="text-uppercase float-right">
+                <Link to={`/tag/${post.business}`}>
+                  {post.business.replace("-", " ")}
+                </Link>
+              </Badge>
             </div>
           </Card>
         </Col>
