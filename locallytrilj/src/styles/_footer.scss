@@ -1,8 +1,30 @@
 .site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $white;
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+  .address-footer {
+    color: rgb(123, 122, 122);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .links-footer {
+    color: rgb(123, 122, 122);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    a {
+      color: rgb(123, 122, 122);
+    }
+    a:hover {
+      color: rgb(46, 5, 141);
+    }
+  }
 
   .footer-social-links {
     text-align: center;
