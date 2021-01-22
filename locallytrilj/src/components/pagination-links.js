@@ -11,7 +11,7 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
   const nextPage = "/blog/pages/" + (currentPage + 1).toString()
 
   return (
-    <div>
+    <div className="pag-links">
       {/*Prva strelica*/}
       <Pagination aria-label="Page navigation example">
         {isFirst ? (
