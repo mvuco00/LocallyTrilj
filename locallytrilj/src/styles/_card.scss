@@ -42,6 +42,15 @@ ul.post-tags {
   align-items: center;
   padding: 5px;
   margin-left: 10px;
+
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    .trenutno {
+      font-size: 14px;
+      color: rgb(21, 71, 180);
+    }
+  }
 }
 
 .card-link {

@@ -14,19 +14,28 @@ const CardComponent = props => {
             className="business-logo"
           />
           <CardBody>
-            <Link to={slugify(props.business.node.name)} className="card-link">
-              {" "}
-              <CardTitle tag="h5">{props.business.node.name}</CardTitle>{" "}
-            </Link>
-
-            <CardSubtitle tag="h6" className="mb-2 text-muted">
-              <span className="text-info">{props.business.node.address}</span>{" "}
-            </CardSubtitle>
-            <Badge color="info" className="text-uppercase">
-              <Link to={`/tag/${slugify(props.business.node.business)}`}>
-                {props.business.node.business}
+            <div>
+              <Link
+                to={slugify(props.business.node.name)}
+                className="card-link"
+              >
+                {" "}
+                <CardTitle tag="h5">{props.business.node.name}</CardTitle>{" "}
               </Link>
-            </Badge>
+
+              <CardSubtitle tag="h6" className="mb-2 text-muted">
+                <span className="text-info">{props.business.node.address}</span>{" "}
+              </CardSubtitle>
+              <Badge color="info" className="text-uppercase">
+                <Link to={`/tag/${slugify(props.business.node.business)}`}>
+                  {props.business.node.business}
+                </Link>
+              </Badge>
+            </div>
+            <div className="trenutno">
+              <b>Trenutno:</b>
+              <div>zatvoreno</div>
+            </div>
           </CardBody>
         </div>
       </Card>

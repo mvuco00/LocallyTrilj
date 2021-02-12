@@ -1,0 +1,29 @@
+.headerItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #155cb9;
+  height: 49px;
+
+  h4 {
+    color: #d7e3f0;
+    margin-left: 10px;
+    margin-top: 5px;
+    &:hover {
+      color: #8dc7ee;
+      text-decoration: none;
+    }
+  }
+}
+.mainheaderLinksMobile {
+  display: block;
+  justify-content: flex-end;
+}
+.headerLinksMobile {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  padding-right: 10px;
+  align-items: flex-end;
+  background-color: #155cb9;
+}
