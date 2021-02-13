@@ -1,15 +1,11 @@
 import React from "react"
-import Header from "../components/header"
 import Footer from "../components/footer"
 import Newsletter from "../components/newsletter"
-import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const Contact = () => (
-  <div>
+  <Layout>
     <div className="container" id="content">
-      <Header siteTitle="LocallyTrilj">
-        <SEO title="Kontakt" />
-      </Header>
       <h1 className="page-title">Kontaktirajte nas</h1>
       <div className="kontaktpage">
         <span className="info2">Za sve dodatne informacije:</span>
@@ -34,7 +30,7 @@ const Contact = () => (
       <Newsletter />
     </div>
     <Footer />
-  </div>
+  </Layout>
 )
 
 export default Contact

@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const menuItems = [
   {
@@ -46,21 +49,29 @@ const HeaderNav = () => {
         </nav>
       ) : (
         <div className="mainheaderLinksMobile">
-          <div className="headerLinksMobile">
-            <div onClick={() => setOpenBar(!openBar)}>
-              <div>|||</div>
+          <h4>LocallyTrilj</h4>
+          <div onClick={() => setOpenBar(!openBar)}>
+            <div className="headerLinksMobile2">
               {openBar ? (
                 <div className="headerLinksMobile">
-                  <div onClick={() => setOpenBar(!openBar)}>
-                    <div>|||</div>
+                  <FontAwesomeIcon icon={faTimes} size="lg" color="white" />
+                  <div className="collapsedLinks">
+                    {menuItems.map(item => (
+                      <Link key={item.title} to={item.url}>
+                        {item.title}
+                      </Link>
+                    ))}
                   </div>
-
-                  {menuItems.map(item => (
-                    <Link to={item.url}>{item.title}</Link>
-                  ))}
                 </div>
               ) : (
-                <div>|||</div>
+                <div>
+                  <FontAwesomeIcon
+                    icon={faBars}
+                    size="lg"
+                    color="white"
+                    className="hambar"
+                  />
+                </div>
               )}
             </div>
           </div>
