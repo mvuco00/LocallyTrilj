@@ -33,11 +33,14 @@ const HeaderNav = () => {
     <div>
       {!isMobile ? (
         <nav className="headerItems">
-          <h4>LocallyTrilj</h4>
+          <h4>
+            <Link to="/">LocallyTrilj</Link>
+          </h4>
           <div className="headerLinks">
             {" "}
             {menuItems.map(item => (
               <Link
+                key={item.title}
                 to={item.url}
                 className={item.className0}
                 activeClassName={item.activeClassName0}

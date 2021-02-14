@@ -40,10 +40,8 @@ class Newsletter extends Component {
       <div>
         <Card>
           <CardBody>
-            <CardTitle tag="h5">Newsletter</CardTitle>
-            <CardSubtitle tag="h6" className="mb-2 text-muted">
-              {this.state.message}
-            </CardSubtitle>
+            <h5 className="newstitle">Newsletter</h5>
+            <h6 className="subtitlenews">{this.state.message}</h6>
             <Form onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Input
@@ -55,7 +53,7 @@ class Newsletter extends Component {
                 />
               </FormGroup>
               <button
-                className="btn btn-outline-success text-uppercase  float-right"
+                className="btn btn-outline-success text-uppercase  float-right pretplati"
                 type="submit"
               >
                 Pretplati se

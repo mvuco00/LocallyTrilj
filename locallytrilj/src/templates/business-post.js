@@ -50,14 +50,16 @@ const BusinessPost = ({ data }) => {
                     <b>Kontakt:</b> {business.kontakt}
                   </h5>
                   <h5 className="info-title-more">Dodatno</h5>
-                  <div>
+                  <h5>
                     <b>Vlasnik:</b> {business.vlasnik}
-                  </div>
+                  </h5>
                   <div>
-                    <b>Specifičnosti objekta: </b>
-                    {tagList.map(el => (
-                      <span key={el}>{`${el} `}</span>
-                    ))}
+                    <h5>
+                      <b>Specifičnosti objekta: </b>
+                      {tagList.map(el => (
+                        <span key={el}>{`${el} `}</span>
+                      ))}
+                    </h5>
                   </div>
 
                   <div className="site-socials">

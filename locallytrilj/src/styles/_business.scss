@@ -88,6 +88,49 @@
   }
 }
 
+@media only screen and (max-width: 657px) {
+  .business-title {
+    font-size: 36px;
+  }
+  .info {
+    .info-title {
+      font-size: 19px;
+    }
+  }
+  .business-logo2 {
+    width: 95px;
+    height: 95px;
+  }
+  h5,
+  .h5 {
+    font-size: 1.2rem;
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (max-width: 567px) {
+  .business-title {
+    font-size: 34px;
+  }
+  .info {
+    .info-title {
+      font-size: 18px;
+    }
+  }
+  .business-logo2 {
+    width: 90px;
+    height: 90px;
+  }
+  h5,
+  .h5 {
+    font-size: 1rem;
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 505px) {
   .card-title {
     font-size: 20px;
@@ -99,18 +142,53 @@
   .btn-outline-primary {
     padding: 0.3rem 0.7rem;
   }
+  .business-title {
+    font-size: 32px;
+  }
+  .info {
+    .info-title {
+      font-size: 17px;
+    }
+  }
+  .business-logo2 {
+    width: 80px;
+    height: 80px;
+  }
+  h5,
+  .h5 {
+    font-size: 0.9rem;
+    span {
+      font-size: 0.9rem;
+    }
+  }
+  .site-socials .social-links {
+    margin-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 444px) {
+  .business-title {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
   .card-text {
     font-size: 15px;
   }
   .btn-outline-primary {
     padding: 0.27rem 0.6rem;
   }
+  .info {
+    margin-left: 95px;
+  }
+  .business-logo2 {
+    margin-right: 10px;
+  }
 }
 
-@media only screen and (max-width: 404px) {
+@media only screen and (max-width: 415px) {
+  .business-title {
+    font-size: 30px;
+  }
   .card-title {
     font-size: 18px;
   }
@@ -119,5 +197,24 @@
   }
   .btn-outline-primary {
     padding: 0.2rem 0.5rem;
+  }
+  .business-title-icon {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0px;
+    .info-title {
+      font-size: 15px;
+    }
+  }
+  .business-logo2 {
+    width: 70px;
+    height: 70px;
   }
 }

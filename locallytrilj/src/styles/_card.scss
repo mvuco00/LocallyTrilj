@@ -18,7 +18,7 @@
   justify-content: center;
 }
 .business-template-row {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 ul.post-tags {
   padding: 0;
@@ -75,5 +75,75 @@ ul.post-tags {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 600px) {
+  .card-title {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .text-info {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .business-logo {
+    width: 90px;
+    height: 90px;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .trenutno {
+    div {
+      font-size: 12px;
+    }
+    b {
+      font-size: 12px;
+    }
+  }
+  .card-flex {
+    padding: 2px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .badge {
+    padding: 0.21em 0.31em;
+    font-size: 65%;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+
+  .dropdown button {
+    padding: 0.33rem 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .trenutno {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .business-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .text-info {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 369px) {
+  .business-logo {
+    width: 72px;
+    height: 72px;
+  }
+  .card-title {
+    font-size: 19px;
+  }
 }

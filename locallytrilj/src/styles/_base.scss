@@ -78,3 +78,47 @@ ul {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #363a75;
 }
+.newstitle {
+  font-weight: bold;
+}
+.subtitlenews {
+  color: gray;
+}
+
+@media only screen and (max-width: 550px) {
+  .kontaktpage {
+    .xy {
+      b {
+        font-size: 14px;
+      }
+    }
+  }
+  .info2 {
+    font-size: 15px;
+  }
+  .page-title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .subtitlenews {
+    font-size: 14px;
+  }
+  .btn {
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .kontaktpage {
+    .xy {
+      b {
+        font-size: 13px;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
