@@ -20,8 +20,8 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <h4 className="text-center">LocallyTrilj</h4>
-        <p className="text-center">Pratite nas na društvenim mrežama</p>
+        <h4 className="footertitle">LocallyTrilj</h4>
+        <p className="footerpar">Pratite nas na društvenim mrežama</p>
         <div className="footer-social-links">
           <ul className="social-links-list">
             <li>

@@ -57,3 +57,41 @@
     }
   }
 }
+
+@media only screen and (max-width: 740px) {
+  .footertitle {
+    font-size: 1.2rem;
+  }
+  .footerpar {
+    font-size: 14px;
+  }
+  .links-footer a {
+    font-size: 10px;
+  }
+  .address-footer div {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .links-footer a {
+    display: none;
+  }
+  .address-footer div {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .footertitle {
+    font-size: 1rem;
+  }
+  .footerpar {
+    font-size: 12px;
+  }
+
+  .social-links-list li a {
+    height: 18px;
+    width: 18px;
+  }
+}
