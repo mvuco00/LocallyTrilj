@@ -85,6 +85,15 @@ ul {
   color: gray;
 }
 
+.searchbar {
+  width: 17rem;
+  background: #ffffff;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 550px) {
   .kontaktpage {
     .xy {
@@ -99,14 +108,29 @@ ul {
   .page-title {
     font-size: 30px;
   }
+  .searchbar {
+    width: 15rem;
+  }
 }
-
+@media only screen and (max-width: 510px) {
+  .dropdown button {
+    padding: 0.33rem 0.35rem;
+  }
+}
 @media only screen and (max-width: 460px) {
   .subtitlenews {
     font-size: 14px;
   }
   .btn {
     padding: 0.2rem 0.6rem;
+  }
+  .searchbar {
+    width: 14rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .searchbar {
+    width: 13rem;
   }
 }
 
@@ -120,5 +144,22 @@ ul {
         font-size: 14px;
       }
     }
+  }
+  .dropdown button {
+    padding: 0.38rem 0.6rem;
+    font-size: 15px;
+  }
+  .searchbar {
+    width: 12rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .dropdown button {
+    padding: 0.42rem 0.6rem;
+    font-size: 14px;
+  }
+  .searchbar {
+    width: 11rem;
   }
 }

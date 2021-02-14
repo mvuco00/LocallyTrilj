@@ -118,9 +118,7 @@ const Cards = props => {
   return (
     <div>
       <div className="searchandfilter">
-        <div>
-          <SearchBar setSearch={setSearch} />
-        </div>
+        <SearchBar setSearch={setSearch} />
 
         <CheckBox
           tags={tags}
