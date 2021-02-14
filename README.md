@@ -20,3 +20,4 @@ LocallyTrilj taj postupak olakšava skupljajući sve potrebne informacije na jed
 - Filter blog postova
 - Google karta lokacije svakog poslovnog objekta
 - Newsletter implementiran preko Mailchimp-a
+- Responzivna stranica
