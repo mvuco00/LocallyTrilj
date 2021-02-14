@@ -38,7 +38,7 @@ const Post = ({ title, business, type, date, body, path, fluid, tags }) => {
           <CardText>{body}</CardText>
           <Link
             to={`/blog/${path}`}
-            className="btn btn-outline-primary float-right"
+            className="btn btn-outline-primary float-right procitajvise"
           >
             Pročitaj više
           </Link>

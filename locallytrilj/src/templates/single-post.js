@@ -26,7 +26,7 @@ const SinglePost = ({ data }) => {
                   <i>Photo by: Flicklr</i>
                 </span>
               </div>
-              <h2>{post.title}</h2>
+              <h2 className="posttitle">{post.title}</h2>
               <div
                 className="blog-post-content"
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}

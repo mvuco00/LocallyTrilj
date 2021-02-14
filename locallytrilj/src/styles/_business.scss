@@ -172,7 +172,10 @@
     margin-bottom: 5px;
   }
   .card-text {
-    font-size: 15px;
+    display: none;
+  }
+  .procitajvise {
+    display: none;
   }
   .btn-outline-primary {
     padding: 0.27rem 0.6rem;
@@ -192,9 +195,7 @@
   .card-title {
     font-size: 18px;
   }
-  .card-text {
-    font-size: 14.5px;
-  }
+
   .btn-outline-primary {
     padding: 0.2rem 0.5rem;
   }
