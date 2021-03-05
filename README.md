@@ -9,24 +9,20 @@
 
 </div>
 
-## Motivacija
-Cilj aplikacije *LocallyTrilj* je olakšati stanovnicima grada Trilja i okolice praćenje novosti i informacija o poslovnim objekatima u gradu (frizerski saloni, krojački saloni, kafići itd.).  
-U manjim gradovima, kao što je Trilj, informacije o radnom vremenu objekta većinom se mogu jedino saznati fizičkim odlaskom do tog objekta.  
-LocallyTrilj taj postupak olakšava skupljajući sve potrebne informacije na jednom mjestu.
+*LocallyTrilj* is application for the people of Trilj. Application collects information about business facilities in town (working hours, contact number, address ect.) Also, it has a blog with important news.
 
-## Alati
+## Built with
 - GatsbyJS, GraphQL
 - ReactStrap
 
-## Dijelovi aplikacije
-- Naslovna stranica na kojoj se nalaze svi poslovni objekti
-- Stranica za svaki poslovni objekt koja sadrži osnovne informacije tog objekta
-- Stranica Novosti, koja je zapravo blog, sadrži sve novosti vezane za poslovne objekte
-- Stranica Kontakt s kontakt podacima organizacije i mogućnosti prijave na newsletter
+## Pages
+- Home page with a list of all business facilities
+- Page for every business with important information about business
+- Blog page
+- Contact page
 
-## Funkcionalnosti
-- Search i filter poslovnih objekata
-- Filter blog postova
-- Google karta lokacije svakog poslovnog objekta
-- Newsletter implementiran preko Mailchimp-a
-- Responzivna stranica
+## Features
+- Searching and filtering facilities
+- Filtering blog posts
+- Newsletter (implemented using Mailchimp)
+- Responsive design
