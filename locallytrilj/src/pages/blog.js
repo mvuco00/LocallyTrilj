@@ -1,6 +1,6 @@
 import React from "react"
 import Post from "../components/post"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import PaginationLinks from "../components/pagination-links"
 import Layout from "../components/layout"
 

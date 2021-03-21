@@ -9,7 +9,7 @@ const CardComponent = props => {
       <Card>
         <div className="card-flex">
           <img
-            src={props.business.node.path}
+            src={`../../${props.business.node.path}`}
             alt="business-logo"
             className="business-logo"
           />

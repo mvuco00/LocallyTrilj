@@ -13,7 +13,6 @@ class Map extends Component {
   }
 
   render() {
-    console.log(this.props.lat)
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: "70vh", width: "100%" }}>

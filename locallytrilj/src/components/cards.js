@@ -8,7 +8,6 @@ const Cards = props => {
   // graphql se koristi s hookovima
   //varijabili search se postavlja vrijesnot "", a za kasnije mijenjanje vrijednosti zove se SetSearch
   const [search, setSearch] = useState("")
-
   const [filtered, setFiltered] = useState(false)
   const [tag, setTag] = useState()
   const [data2, setData2] = useState([])
@@ -16,7 +15,7 @@ const Cards = props => {
   const [filteredData, setFilteredData] = useState()
 
   // dohvaćaju se podaci preko graphql upita
-  const [data, setData] = useState(
+  const data = 
     useStaticQuery(graphql`
       {
         allBusinessJson {
@@ -39,7 +38,7 @@ const Cards = props => {
         }
       }
     `)
-  )
+  
 
   //useEffect služi da se nešto napravi nakon renderiranja stranice i nakon svakog update-a
   //preko njega pristupa se state-u

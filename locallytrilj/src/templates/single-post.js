@@ -11,7 +11,6 @@ const SinglePost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} />
-      {console.log(post)}
       <Row>
         <Col md="9">
           <Card>
