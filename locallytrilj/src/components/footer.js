@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaFacebook } from "react-icons/fa"
-import { FaTwitter } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
 import { FaGoogle } from "react-icons/fa"
+import {FaLinkedin} from 'react-icons/fa'
 const Footer = () => {
   return (
     <div className="site-footer">
@@ -34,16 +35,7 @@ const Footer = () => {
                 <FaFacebook size="20px" />
               </a>
             </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="twitter"
-              >
-                <FaTwitter size="20px" />
-              </a>
-            </li>
+            
             <li>
               <a
                 href="https://www.trilj.hr"
@@ -52,6 +44,26 @@ const Footer = () => {
                 className="google"
               >
                 <FaGoogle size="20px" />
+              </a>
+            </li>
+			<li>
+              <a
+                href="https://www.linkedin.com/in/marijavuco/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="google"
+              >
+                <FaLinkedin size="20px" />
+              </a>
+            </li>
+			<li>
+              <a
+                href="https://github.com/mvuco00/LocallyTrilj"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="google"
+              >
+                <FaGithub size="20px" />
               </a>
             </li>
           </ul>

@@ -34,7 +34,7 @@ const CardComponent = props => {
             </div>
             <div className="trenutno">
               <b>Trenutno:</b>
-              <div>zatvoreno</div>
+              <div>otvoreno</div>
             </div>
           </CardBody>
         </div>

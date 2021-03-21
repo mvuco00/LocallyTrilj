@@ -29,6 +29,9 @@ const HeaderNav = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 560px)` })
   const [openBar, setOpenBar] = useState(false)
 
+  const handleOpenBar = () => {
+	  setOpenBar(!openBar)
+  }
   return (
     <div>
       {!isMobile ? (
@@ -53,7 +56,7 @@ const HeaderNav = () => {
       ) : (
         <div className="mainheaderLinksMobile">
           <h4>LocallyTrilj</h4>
-          <div onClick={() => setOpenBar(!openBar)}>
+          <div role='button' tabIndex={0} onClick={handleOpenBar} onKeyDown={handleOpenBar}>
             <div className="headerLinksMobile2">
               {openBar ? (
                 <div className="headerLinksMobile">

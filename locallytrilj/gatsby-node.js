@@ -5,7 +5,6 @@ const _ = require(`lodash`)
 //executes each time one node is created in graphql schema
 //executes each time one node is created in graphql schema
 exports.onCreateNode = ({ node, actions }) => {
-  console.log(`Node created of type "${node.internal.type}"`)
   const { createNodeField } = actions
   //provjera tipa čvora
   if (node.internal.type === "MarkdownRemark") {
