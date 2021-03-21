@@ -11,6 +11,9 @@
 
 *LocallyTrilj* is application for the people of Trilj. Application collects information about business facilities in town (working hours, contact number, address ect.) Also, it has a blog with important news.
 
+## Netlify
+- https://locallytrilj.netlify.app/
+
 ## Built with
 - GatsbyJS, GraphQL
 - ReactStrap
