@@ -55,7 +55,7 @@ const HeaderNav = () => {
         </nav>
       ) : (
         <div className="mainheaderLinksMobile">
-          <h4>LocallyTrilj</h4>
+          <Link to="/"><h4>LocallyTrilj</h4></Link>
           <div role='button' tabIndex={0} onClick={handleOpenBar} onKeyDown={handleOpenBar}>
             <div className="headerLinksMobile2">
               {openBar ? (
