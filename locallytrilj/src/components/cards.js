@@ -15,30 +15,28 @@ const Cards = props => {
   const [filteredData, setFilteredData] = useState()
 
   // dohvaćaju se podaci preko graphql upita
-  const data = 
-    useStaticQuery(graphql`
-      {
-        allBusinessJson {
-          edges {
-            node {
-              address
-              business
-              facebook
-              instagram
-              id
-              lat
-              long
-              name
-              path
-              tag
-              type
-              workTime
-            }
+  const data = useStaticQuery(graphql`
+    {
+      allBusinessJson {
+        edges {
+          node {
+            address
+            business
+            facebook
+            instagram
+            id
+            lat
+            long
+            name
+            path
+            tag
+            type
+            workTime
           }
         }
       }
-    `)
-  
+    }
+  `)
 
   //useEffect služi da se nešto napravi nakon renderiranja stranice i nakon svakog update-a
   //preko njega pristupa se state-u
@@ -72,9 +70,11 @@ const Cards = props => {
       {data.allBusinessJson.edges.map(businessObject => {
         return (
           <div key={businessObject.node.id}>
-            {tags.includes(businessObject.node.type)
-              ? null
-              : tags.push(businessObject.node.type)}
+            {tags.includes(businessObject.node.type) ? (
+              <></>
+            ) : (
+              tags.push(businessObject.node.type)
+            )}
             <CardComponent business={businessObject} />
           </div>
         )
@@ -96,7 +96,9 @@ const Cards = props => {
                   <CardComponent business={businessObject} />
                 ) : tag === "clean" ? (
                   window.location.reload()
-                ) : null}
+                ) : (
+                  <></>
+                )}
               </div>
             )
           })
@@ -107,7 +109,9 @@ const Cards = props => {
                   <CardComponent business={businessObject} />
                 ) : tag === "clean" ? (
                   window.location.reload()
-                ) : null}
+                ) : (
+                  <></>
+                )}
               </div>
             )
           })}
@@ -118,7 +122,6 @@ const Cards = props => {
     <div>
       <div className="searchandfilter">
         <SearchBar setSearch={setSearch} />
-
         <CheckBox
           tags={tags}
           setFilter={tagClicked}

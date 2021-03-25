@@ -8,10 +8,9 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="LocallyTrilj" />
-
     <Row>
       <Col md="8">
-        <h1 className="page-title">Poslovni objekti</h1> <Cards />{" "}
+        <h1 className="page-title">Poslovni objekti</h1> <Cards />
       </Col>
       <Col md="4">
         <h1 className="page-title">Najnovije</h1>

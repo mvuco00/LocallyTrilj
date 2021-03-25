@@ -3,7 +3,16 @@ import { Link } from "gatsby"
 import { Card, Badge, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 import { slugify } from "../util/utils"
 
+function realTimeClock() {
+  var rtClock = new Date()
+  var hours = rtClock.getHours()
+  hours = ("0" + hours).slice(-2)
+
+  return { hours }
+}
+
 const CardComponent = props => {
+  const { hours } = realTimeClock()
   return (
     <div>
       <Card>
@@ -34,7 +43,13 @@ const CardComponent = props => {
             </div>
             <div className="trenutno">
               <b>Trenutno:</b>
-              <div>otvoreno</div>
+              <div className="hours">
+                {hours > 22 ? (
+                  <span className="closed">zatvoreno</span>
+                ) : (
+                  <span className="open">otvoreno</span>
+                )}
+              </div>
             </div>
           </CardBody>
         </div>
