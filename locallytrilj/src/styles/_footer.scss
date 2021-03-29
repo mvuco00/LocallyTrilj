@@ -1,23 +1,27 @@
-.site-footer {
+@mixin flexing($direction, $justify) {
   display: flex;
-  justify-content: space-between;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+.site-footer {
+  @include flexing(row, space-between);
   align-items: center;
   background-color: $white;
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+
   .address-footer {
     color: rgb(123, 122, 122);
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
+    @include flexing(column, space-between);
     align-items: flex-start;
   }
   .links-footer {
     color: rgb(123, 122, 122);
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
+    @include flexing(column, space-between);
     a {
       color: rgb(123, 122, 122);
     }
