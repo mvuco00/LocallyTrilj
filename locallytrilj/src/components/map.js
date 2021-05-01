@@ -1,35 +1,34 @@
-import React, { Component } from "react"
+import React from "react"
 import GoogleMapReact from "google-map-react"
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+const Marker = () => (
+  <div>
+    <img src="/placeholder.png" alt="slika" className="pin" />
+  </div>
+)
 
-class Map extends Component {
-  static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33,
-    },
-    zoom: 11,
+const Map = ({ lat, long }) => {
+  const zoom = 12
+  const location = {
+    lat: lat,
+    lng: long,
   }
 
-  render() {
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: "70vh", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "" }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
-          <AnyReactComponent
-            lat={this.props.lat}
-            lng={this.props.long}
-            text="My Marker"
-          />
-        </GoogleMapReact>
-      </div>
-    )
-  }
+  return (
+    <div className="map-wrapper">
+      <GoogleMapReact
+        bootstrapURLKeys={{
+          key: "",
+          language: "en",
+        }}
+        defaultCenter={location}
+        draggable={false}
+        defaultZoom={zoom}
+      >
+        <Marker />
+      </GoogleMapReact>
+    </div>
+  )
 }
 
 export default Map
