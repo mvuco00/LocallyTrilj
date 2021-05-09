@@ -6,6 +6,8 @@ const Contact = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
+    telephone: "",
+    projectDetails: "",
   })
   const handleChange = e => {
     const { name, value } = e.target
@@ -17,7 +19,6 @@ const Contact = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(data)
 
     if (data.name && data.email) {
       fetch("/api/sendEmail", {
@@ -78,6 +79,20 @@ const Contact = () => {
             name="email"
             placeholder="Email"
             value={data.email}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="telephone"
+            placeholder="Telephone"
+            value={data.telephone}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="projectDetails"
+            placeholder="projectDetails"
+            value={data.projectDetails}
             onChange={handleChange}
           />
           <button type="submit">SEND</button>
