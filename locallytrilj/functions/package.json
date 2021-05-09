@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemailer": "^6.6.0"
+    "@sendgrid/mail": "^7.4.4",
+    "nodemailer": "^6.6.0",
+    "nodemailer-sendgrid-transport": "^0.2.0"
   }
 }
